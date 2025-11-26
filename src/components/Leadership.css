@@ -1,0 +1,140 @@
+.leadership {
+  padding: 8rem 0;
+  background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.02), transparent);
+}
+
+.leadership-content {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+}
+
+.leadership-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.leadership-quote {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--white);
+  padding: 4rem 2rem;
+  margin: 3rem 0;
+  position: relative;
+  letter-spacing: 0.02em;
+}
+
+.leadership-quote::before,
+.leadership-quote::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.leadership-quote::before {
+  top: 0;
+}
+
+.leadership-quote::after {
+  bottom: 0;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principle-card {
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.principle-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.principle-card:hover {
+  border-color: rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.principle-card:hover::before {
+  opacity: 1;
+}
+
+.principle-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.2;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.principle-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.principle-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .leadership {
+    padding: 5rem 0;
+  }
+
+  .leadership-text {
+    font-size: 1rem;
+  }
+
+  .leadership-quote {
+    font-size: 1.3rem;
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .principle-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .principle-number {
+    font-size: 2.5rem;
+  }
+
+  .principle-title {
+    font-size: 1.5rem;
+  }
+}
